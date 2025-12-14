@@ -1,0 +1,26 @@
+body{
+background:black;
+color:white;
+font-family:sans-serif;
+text-align:center;
+}
+
+.app{
+padding:20px;
+}
+
+.toggle button{
+padding:10px 20px;
+margin:5px;
+}
+
+.rules div{
+margin:10px;
+font-size:18px;
+}
+
+#final{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
