@@ -1,2 +1,38 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
 <link rel="manifest" href="manifest.json">
+<title>Trade Feasibility Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h2>Trade Feasibility</h2>
+
+<div class="toggle">
+<button onclick="setMode('call')">CALL</button>
+<button onclick="setMode('put')">PUT</button>
+</div>
+
+<div class="rules">
+<div id="r1">Rule 1 ❌</div>
+<div id="r2">Rule 2 ❌</div>
+<div id="r3">Rule 3 ❌</div>
+<div id="r4">Rule 4 ❌</div>
+</div>
+
+<div id="final">NO TRADE</div>
+
+<button onclick="checkRules()">Check</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
