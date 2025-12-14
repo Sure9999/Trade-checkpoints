@@ -12,23 +12,36 @@
 
 <div class="app">
 
-<h2>Trade Feasibility</h2>
+<h2>Trade Feasibility Checker</h2>
 
 <div class="toggle">
 <button onclick="setMode('call')">CALL</button>
 <button onclick="setMode('put')">PUT</button>
 </div>
 
-<div class="rules">
-<div id="r1">Rule 1 ❌</div>
-<div id="r2">Rule 2 ❌</div>
-<div id="r3">Rule 3 ❌</div>
-<div id="r4">Rule 4 ❌</div>
+<!-- CALL RULES -->
+<div id="callBox" class="box">
+<h3>CALL CONDITIONS</h3>
+
+<p id="c1">Price forms lower high or support with V recovery ❌</p>
+<p id="c2">Two strong green candles closing above previous high ❌</p>
+<p id="c3">Upper swing breaks previous swing high ❌</p>
+<p id="c4">Price trades above second candle high ❌</p>
 </div>
 
-<div id="final">NO TRADE</div>
+<!-- PUT RULES -->
+<div id="putBox" class="box" style="display:none">
+<h3>PUT CONDITIONS</h3>
 
-<button onclick="checkRules()">Check</button>
+<p id="p1">Price forms higher low or resistance with V fall ❌</p>
+<p id="p2">Two strong red candles closing below previous low ❌</p>
+<p id="p3">Lower swing breaks previous swing low ❌</p>
+<p id="p4">Price trades below second candle low ❌</p>
+</div>
+
+<h2 id="final">NO TRADE</h2>
+
+<button onclick="checkRules()">CHECK FEASIBILITY</button>
 
 </div>
 
