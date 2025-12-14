@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trade Feasibility Checker</title>
-
-<link rel="stylesheet" href="/Trade-checkpoints/style.css">
-<link rel="manifest" href="/Trade-checkpoints/manifest.json">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app">
+<h1>Trade Feasibility Checker</h1>
 
-<h2>Trade Feasibility Checker</h2>
-
-<div class="toggle">
+<div class="mode">
 <button onclick="setMode('call')">CALL</button>
 <button onclick="setMode('put')">PUT</button>
 </div>
 
-<!-- CALL RULES -->
-<div id="callBox" class="box">
-<h3>CALL CONDITIONS</h3>
+<div class="box">
+
+<h2 id="title">CALL CONDITIONS</h2>
+
+<!-- CALL -->
+<div id="call">
 <p id="c1" onclick="toggleRule('c1',0)">Price forms lower high or support with V recovery ❌</p>
-<p id="c2" onclick="toggleRule('c2',1)">Two strong green candles closing above previous high ❌</p>
+<p id="c2" onclick="toggleRule('c2',1)">Two green candles closing above previous high ❌</p>
 <p id="c3" onclick="toggleRule('c3',2)">Upper swing breaks previous swing high ❌</p>
 <p id="c4" onclick="toggleRule('c4',3)">Price trades above second candle high ❌</p>
 </div>
 
-<!-- PUT RULES -->
-<div id="putBox" class="box" style="display:none">
-<h3>PUT CONDITIONS</h3>
-  
+<!-- PUT -->
+<div id="put" style="display:none">
 <p id="p1" onclick="toggleRule('p1',0)">Price forms higher low or resistance with V fall ❌</p>
-<p id="p2" onclick="toggleRule('p2',1)">Two strong red candles closing below previous low ❌</p>
+<p id="p2" onclick="toggleRule('p2',1)">Two red candles closing below previous low ❌</p>
 <p id="p3" onclick="toggleRule('p3',2)">Lower swing breaks previous swing low ❌</p>
 <p id="p4" onclick="toggleRule('p4',3)">Price trades below second candle low ❌</p>
-  
+</div>
+
 </div>
 
 <h2 id="final">NO TRADE</h2>
 
-<button onclick="checkRules()">CHECK FEASIBILITY</button>
+<button class="check" onclick="checkRules()">CHECK FEASIBILITY</button>
 
-</div>
-
-<script src="/Trade-checkpoints/script.js"></script>
+<!-- IMPORTANT -->
+<script src="script.js?v=5"></script>
 
 </body>
 </html>
